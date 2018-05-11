@@ -1,0 +1,27 @@
+{
+  "domain":"xmpp.ipop-project.org",
+  "relations": {
+    "bruce_gw": [
+      "janice_gw",
+      "jude_gw",
+      "jooly_gw"
+    ],
+    "janice_gw": [
+      "bruce_gw",
+      "jack_gw"
+    ],
+    "jack_gw": [
+      "janice_gw",
+      "jude_gw",
+      "jooly_gw"
+    ],
+    "jude_gw": [
+      "bruce_gw",
+      "jack_gw"
+    ],
+    "jooly_gw": [
+      "bruce_gw",
+      "jack_gw"
+    ]
+  }
+}

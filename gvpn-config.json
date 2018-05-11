@@ -1,0 +1,84 @@
+{
+  "CFx": {
+    "Model": "Default",
+    "Overlays": [ "A0FB390" ]
+  },
+  "Logger": {
+    "Enabled": true,
+    "LogLevel": "DEBUG",
+    "Device": "File",
+    "Directory": "./logs/",
+    "CtrlLogFileName": "ctrl.log",
+    "TincanLogFileName": "tincan_log",
+    "MaxFileSize": 5000000,
+    "MaxArchives": 5
+  
+  },
+  "TincanInterface": {
+    "Enabled": true
+  },
+  "Signal": {
+    "Enabled": true,
+    "Overlays": {
+      "A0FB390": {
+        "HostAddress": "xmpp.ipop-project.org",
+        "Port": "5222",
+        "Username": "janice_gw@xmpp.ipop-project.org",
+        "Password": "janice_gw",
+        "AuthenticationMethod": "PASSWORD",
+        "AcceptUntrustedServer": true
+      }
+    }
+  },
+  "Topology": {
+    "Enabled": true,
+    "Overlays": {
+      "A0FB390": {
+        "Name": "IpopSwitchOverlay01",
+        "Description": "SVPN Network",
+        "EnableIPMapping": false,
+        "EncryptionEnabled": true
+      }
+    }
+  },
+  "LinkManager": {
+    "Enabled": true,
+    "Stun": [ "stun.l.google.com:19302" ],
+    "Turn": [
+      {
+        "Address": "turn.ipop-project.org:19302",
+        "User": "turn1",
+        "Password": "ShrR4754shcTr"
+      }
+    ],
+    "Overlays": {
+      "A0FB390": {
+        "Type": "TUNNEL",
+        "IP4": "",
+        "IP4PrefixLen": 16,
+        "MTU4": 1500,
+        "TapName": "ipop_tap",
+        "IgnoredNetInterfaces": [ "ipop_tap" ]
+      },
+      "A0FB391": {
+        "Type": "TUNNEL",
+        "IP4": "",
+        "IP4PrefixLen": 16,
+        "MTU4": 1500,
+        "TapName": "ipop_tap",
+        "IgnoredNetInterfaces": [ "ipop_tap" ]
+      }
+    }
+  }, 
+  "Icc": {
+    "Enabled": false
+  },
+  "Broadcaster": {
+    "Enabled": false
+  },  
+  "OverlayVisualizer": {
+    "Enabled": false,
+    "WebServiceAddress": "***:5000",
+    "NodeName": "Node1"
+  }   
+}
